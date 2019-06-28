@@ -1,0 +1,29 @@
+>> Every 1.0s: kubectl get pods,services,serviceaccount -n openebs                          Fri Jun 28 03:44:45 2019
+
+NAME                                                                  READY   STATUS    RESTARTS   AGE
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-admission-server-7cjmqft   1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-apiserver-d556694b4sg8kp   1/1     Running   0          10m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-localpv-provisioner5tsrs   1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-ndm-operator-67bcfbcmvpg   1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-ndm-pkl9x                  1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-ndm-qv74q                  1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-ndm-snf6v                  1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-provisioner-7ccf979fcnsq   1/1     Running   0          16m
+pod/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-snapshot-operator-6hj4gk   2/2     Running   0          16m
+
+NAME                                                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)
+AGE
+service/admission-server-svc                                ClusterIP   10.23.241.243   <none>        443/TCP
+16m
+service/oebs-ava6bfn4etx33j224wyiwy0w1-openebs-apiservice   ClusterIP   10.23.255.31    <none>        5656/TCP
+16m
+
+NAME                                                    SECRETS   AGE
+serviceaccount/default                                  1         71d
+serviceaccount/oebs-ava6bfn4etx33j224wyiwy0w1-openebs   1         16m
+
+>> kubectl get clusterrole,clusterrolebinding | grep openebs 
+
+clusterrole.rbac.authorization.k8s.io/oebs-ava6bfn4etx33j224wyiwy0w1-openebs                                 17m
+
+clusterrolebinding.rbac.authorization.k8s.io/oebs-ava6bfn4etx33j224wyiwy0w1-openebs                 17m
